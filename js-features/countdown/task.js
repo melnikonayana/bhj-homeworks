@@ -1,5 +1,6 @@
 const timer = document.getElementById('timer');
-let time = 5460;
+let time = 30;
+let timerId = null;
 
 function countdown() {
     let hours = Math.floor(time / 3600);
@@ -12,5 +13,7 @@ function countdown() {
     time--;
     if (timer.textContent === '00:00:00') {
         alert('Вы победили в конкурсе!');
-}}
-setInterval(countdown, 1000);
+        clearInterval(timerId);
+    }
+}
+timerId = setInterval(countdown, 1000);

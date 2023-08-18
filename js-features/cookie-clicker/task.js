@@ -8,9 +8,9 @@ cookie.onclick = function () {
         cookie.width = 230;
     } else {
         cookie.width = 200;
-        counter.textContent++;
-        const currentClickTime = Date.now();
-        clickSpeed.textContent = (1 / ((currentClickTime - lastClickTime) / 1000)).toFixed(2);
-        lastClickTime = currentClickTime;
     }
+    counter.textContent++;
+    const currentClickTime = Date.now();
+    clickSpeed.textContent = (1 / ((currentClickTime - lastClickTime) / 1000)).toFixed(2);
+    lastClickTime = currentClickTime;
 }
