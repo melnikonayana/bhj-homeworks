@@ -6,10 +6,11 @@ function changeClass() {
     counter++;
     rotator[counter].classList.toggle('rotator__case_active');
 
-    if(counter === rotator.length - 1) {
+    if (counter === rotator.length - 1) {
         rotator[counter].classList.toggle('rotator__case_active');
         counter = 0;
         rotator[counter].classList.toggle('rotator__case_active');
     }
 }
-setInterval(changeClass,1000)
+
+setInterval(changeClass, 1000)
