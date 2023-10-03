@@ -2,8 +2,7 @@ const dropdowns = Array.from(document.getElementsByClassName('dropdown__value'))
 
 dropdowns.forEach((dropdown) => {
     let dropdownContent = dropdown.nextElementSibling;
-    dropdown.addEventListener('click',
-        function () {
+    dropdown.addEventListener('click', function () {
             dropdownContent.classList.toggle('dropdown__list_active');
         })
 
