@@ -8,11 +8,13 @@ hasTooltips.forEach((hasTooltip) => {
     element.classList.add('tooltip');
     // добавляем в элемент подсказки текст из св-ва title
     element.textContent = title;
-    // добавляем элемент подсказки на страницу
-    hasTooltip.appendChild(element);
     hasTooltip.addEventListener('click', (event) => {
         event.preventDefault();
         element.classList.toggle('tooltip_active');
+        const coords = hasTooltip.getBoundingClientRect();
+        element.style.left = coords.left + 'px';
+        element.style.top = coords.bottom + 'px';
+        document.body.append(element);
     })
 })
 
